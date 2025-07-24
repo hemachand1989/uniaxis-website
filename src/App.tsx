@@ -1,4 +1,3 @@
-import React from 'react';
 import { Navigation, Footer } from '@/components/layout';
 import {
   HeroSection,
