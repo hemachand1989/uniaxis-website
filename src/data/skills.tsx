@@ -1,4 +1,4 @@
-import { Code, Database, Cloud, Shield, Users, Server } from 'lucide-react';
+import { Code, Database, Cloud, Shield, Users } from 'lucide-react';
 import { Skill } from '@/types';
 
 export const skills: Skill[] = [
