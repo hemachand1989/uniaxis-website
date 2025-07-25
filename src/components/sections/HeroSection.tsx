@@ -17,7 +17,7 @@ export const HeroSection: React.FC = () => {
         <p className="text-xl md:text-2xl mb-12 text-gray-400 max-w-3xl mx-auto">
           15+ years of expertise in modern web development, microservices architecture, and LTI integrations
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
           <Button
             onClick={() => scrollToSection('services')}
             variant="primary"
@@ -33,9 +33,10 @@ export const HeroSection: React.FC = () => {
             See Portfolio
           </Button>
         </div>
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <ChevronDown className="w-8 h-8 text-primary-400" />
-        </div>
+      </div>
+      {/* Moved ChevronDown outside the container and added proper positioning */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce z-20">
+        <ChevronDown className="w-8 h-8 text-primary-400" />
       </div>
     </section>
   );
