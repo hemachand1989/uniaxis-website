@@ -34,10 +34,14 @@ export const HeroSection: React.FC = () => {
           </Button>
         </div>
       </div>
-      {/* Moved ChevronDown outside the container and added proper positioning */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce z-20">
-        <ChevronDown className="w-8 h-8 text-primary-400" />
-      </div>
+      {/* Clickable ChevronDown with proper cursor and hover effects */}
+      <button
+        onClick={() => scrollToSection('about')}
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce z-20 cursor-pointer hover:scale-110 transition-all duration-300 p-2 rounded-full hover:bg-primary-400/20"
+        aria-label="Scroll to About section"
+      >
+        <ChevronDown className="w-8 h-8 text-primary-400 hover:text-primary-300" />
+      </button>
     </section>
   );
 };
