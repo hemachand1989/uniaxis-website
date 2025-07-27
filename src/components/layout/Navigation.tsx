@@ -27,9 +27,20 @@ export const Navigation: React.FC = () => {
     <nav className="fixed top-0 w-full bg-slate-900/95 backdrop-blur-sm z-50 border-b border-slate-700">
       <div className="container-custom">
         <div className="flex justify-between items-center py-4">
-          <div className="text-2xl font-bold gradient-text">
-            UniAxis
-          </div>
+          {/* Logo and Brand */}
+          <button 
+            onClick={() => handleNavClick('home')}
+            className="flex items-center space-x-3 hover:opacity-80 transition-opacity"
+          >
+            <img 
+              src="/logo.svg" 
+              alt="UniAxis Logo" 
+              className="w-8 h-8"
+            />
+            <div className="text-2xl font-bold gradient-text">
+              UniAxis
+            </div>
+          </button>
           
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-8">
