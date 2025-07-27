@@ -1,6 +1,6 @@
 import React from 'react';
 import { Mail, MapPin, Building } from 'lucide-react';
-import { Section, Button, Card } from '@/components/ui';
+import { Section, Card } from '@/components/ui';
 
 const contactInfo = [
   {
@@ -19,10 +19,6 @@ const contactInfo = [
     value: "ACN 678 809 697"
   }
 ];
-
-const handleEmailClick = () => {
-  window.location.href = 'mailto:hello@uniaxis.com.au?subject=Project Inquiry - UniAxis&body=Hi,%0D%0A%0D%0AI would like to discuss a potential project with you.%0D%0A%0D%0APlease let me know when would be a good time to connect.%0D%0A%0D%0AThank you!';
-};
 
 export const ContactSection: React.FC = () => {
   return (
@@ -46,7 +42,16 @@ export const ContactSection: React.FC = () => {
                   {info.icon}
                 </div>
                 <h3 className="text-xl font-semibold mb-2">{info.title}</h3>
-                <p className="text-gray-400">{info.value}</p>
+                {info.title === "Email" ? (
+                  <a 
+                    href="mailto:hello@uniaxis.com.au"
+                    className="text-gray-400 hover:text-primary-400 transition-colors cursor-pointer"
+                  >
+                    {info.value}
+                  </a>
+                ) : (
+                  <p className="text-gray-400">{info.value}</p>
+                )}
               </div>
             );
           })}
@@ -58,9 +63,12 @@ export const ContactSection: React.FC = () => {
             Whether you need a complete application, LTI integration, or technical consulting, 
             I'm here to help turn your vision into reality.
           </p>
-          <Button size="lg" onClick={handleEmailClick}>
+          <a
+            href="mailto:hello@uniaxis.com.au?subject=Project%20Inquiry%20-%20UniAxis&body=Hi%2C%0D%0A%0D%0AI%20would%20like%20to%20discuss%20a%20potential%20project%20with%20you.%0D%0A%0D%0APlease%20let%20me%20know%20when%20would%20be%20a%20good%20time%20to%20connect.%0D%0A%0D%0AThank%20you!"
+            className="btn-primary inline-block cursor-pointer"
+          >
             Start a Conversation
-          </Button>
+          </a>
         </Card>
         
         {/* Business details footer */}
