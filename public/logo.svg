@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#60a5fa;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#3b82f6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1d4ed8;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#22d3ee;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0891b2;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="90" fill="url(#logoGradient)" opacity="0.1"/>
+  
+  <!-- Main axis lines forming a stylized "U" -->
+  <path d="M60 60 L60 120 Q60 140 80 140 L120 140 Q140 140 140 120 L140 60" 
+        stroke="url(#logoGradient)" 
+        stroke-width="8" 
+        fill="none" 
+        stroke-linecap="round"/>
+  
+  <!-- Connecting nodes/dots representing connectivity -->
+  <circle cx="60" cy="60" r="6" fill="url(#accentGradient)"/>
+  <circle cx="140" cy="60" r="6" fill="url(#accentGradient)"/>
+  <circle cx="100" cy="140" r="6" fill="url(#accentGradient)"/>
+  
+  <!-- Additional geometric elements suggesting tech/architecture -->
+  <path d="M80 80 L120 80" stroke="url(#accentGradient)" stroke-width="3" opacity="0.7"/>
+  <path d="M85 100 L115 100" stroke="url(#accentGradient)" stroke-width="3" opacity="0.7"/>
+  
+  <!-- Subtle grid pattern in background -->
+  <defs>
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="url(#logoGradient)" stroke-width="0.5" opacity="0.2"/>
+    </pattern>
+  </defs>
+  <rect width="200" height="200" fill="url(#grid)" opacity="0.3"/>
+</svg>
