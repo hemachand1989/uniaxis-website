@@ -9,7 +9,7 @@ export const Footer: React.FC = () => {
         </div>
         <p className="text-gray-400 mb-4">Delivering modern web solutions with exceptional speed and quality</p>
         <p className="text-gray-500 text-sm">
-          Copyright © 2025 UniAxis (ABN 48 678 809 697, ACN 678 809 697)
+          Copyright © 2025 UniAxis Pty Ltd (ACN 678 809 697)
         </p>
       </div>
     </footer>
