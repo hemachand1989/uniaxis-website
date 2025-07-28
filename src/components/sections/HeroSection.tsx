@@ -11,15 +11,29 @@ export const HeroSection: React.FC = () => {
         <h1 className="text-5xl md:text-7xl font-bold mb-6 gradient-text animate-fade-in">
           UniAxis
         </h1>
-        <h2 className="text-2xl md:text-3xl mb-4 text-gray-300">
+        <h2 className="text-2xl md:text-3xl mb-8 text-gray-300">
           Independent Technology Consulting
         </h2>
-        <p className="text-lg md:text-xl mb-8 text-gray-400">
-          Led by <span className="text-primary-400 font-semibold">Hem Paruchuri</span> • Principal Full Stack Engineer
+        <p className="text-xl md:text-2xl mb-8 text-gray-400 max-w-4xl mx-auto">
+          Delivering modern web solutions with exceptional speed and quality
         </p>
-        <p className="text-xl md:text-2xl mb-12 text-gray-400 max-w-3xl mx-auto">
-          15+ years of expertise in modern web development, microservices architecture, and LTI integrations
-        </p>
+        <div className="flex flex-wrap justify-center gap-4 mb-12 text-sm md:text-base">
+          <span className="px-4 py-2 bg-primary-600/20 text-primary-300 rounded-full border border-primary-600/30">
+            • Full Stack Development
+          </span>
+          <span className="px-4 py-2 bg-primary-600/20 text-primary-300 rounded-full border border-primary-600/30">
+            • Microservices Architecture
+          </span>
+          <span className="px-4 py-2 bg-primary-600/20 text-primary-300 rounded-full border border-primary-600/30">
+            • LTI Integrations
+          </span>
+          <span className="px-4 py-2 bg-primary-600/20 text-primary-300 rounded-full border border-primary-600/30">
+            • Cloud Solutions
+          </span>
+          <span className="px-4 py-2 bg-primary-600/20 text-primary-300 rounded-full border border-primary-600/30">
+            • University Systems
+          </span>
+        </div>
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
           <Button
             onClick={() => scrollToSection('services')}
