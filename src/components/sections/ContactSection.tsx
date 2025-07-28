@@ -1,24 +1,6 @@
 import React from 'react';
-import { Mail, MapPin, Building } from 'lucide-react';
+import { Mail } from 'lucide-react';
 import { Section, Card } from '@/components/ui';
-
-const contactInfo = [
-  {
-    icon: <Mail className="w-8 h-8" />,
-    title: "Email",
-    value: "hello@uniaxis.com.au"
-  },
-  {
-    icon: <MapPin className="w-8 h-8" />,
-    title: "Location",
-    value: "Available globally"
-  },
-  {
-    icon: <Building className="w-8 h-8" />,
-    title: "Business Registration",
-    value: "ACN 678 809 697"
-  }
-];
 
 export const ContactSection: React.FC = () => {
   return (
@@ -33,28 +15,20 @@ export const ContactSection: React.FC = () => {
           </p>
         </div>
         
-        <div className="grid md:grid-cols-3 gap-8 mb-12">
-          {contactInfo.map((info, index) => {
-            const colors = ['bg-primary-600', 'bg-secondary-600', 'bg-primary-500'];
-            return (
-              <div key={index} className="text-center">
-                <div className={`${colors[index]} w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4`}>
-                  {info.icon}
-                </div>
-                <h3 className="text-xl font-semibold mb-2">{info.title}</h3>
-                {info.title === "Email" ? (
-                  <a 
-                    href="mailto:hello@uniaxis.com.au"
-                    className="text-gray-400 hover:text-primary-400 transition-colors cursor-pointer"
-                  >
-                    {info.value}
-                  </a>
-                ) : (
-                  <p className="text-gray-400">{info.value}</p>
-                )}
-              </div>
-            );
-          })}
+        {/* Single Email Contact */}
+        <div className="flex justify-center mb-12">
+          <div className="text-center">
+            <div className="w-20 h-20 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-6">
+              <Mail className="w-10 h-10 text-white" />
+            </div>
+            <h3 className="text-2xl font-semibold mb-4 text-white">Email</h3>
+            <a 
+              href="mailto:hello@uniaxis.com.au"
+              className="text-xl text-primary-400 hover:text-primary-300 transition-colors cursor-pointer font-medium"
+            >
+              hello@uniaxis.com.au
+            </a>
+          </div>
         </div>
 
         <Card className="p-8 text-center">
