@@ -31,6 +31,45 @@ export const TeamSection: React.FC = () => {
             enterprise-grade architecture, and innovative problem-solving approaches.
           </p>
 
+          {/* Enterprise Software Expertise */}
+          <div className="bg-gradient-to-r from-slate-700 to-slate-600 p-6 rounded-xl border border-slate-500 mb-6">
+            <h4 className="text-xl font-bold mb-4 text-secondary-300">Enterprise Software Expertise</h4>
+            <div className="grid md:grid-cols-2 gap-6 text-left">
+              <div>
+                <h5 className="font-semibold text-white mb-2">🏗️ Monorepo Architecture</h5>
+                <p className="text-gray-300 text-sm">
+                  Designed and implemented monorepo solutions for enterprise-scale applications, 
+                  enabling efficient code sharing, unified tooling, and streamlined deployment pipelines 
+                  across multiple teams and projects.
+                </p>
+              </div>
+              <div>
+                <h5 className="font-semibold text-white mb-2">🧩 Modular Code Design</h5>
+                <p className="text-gray-300 text-sm">
+                  Architected highly modular codebases with clear separation of concerns, enabling 
+                  maintainable, testable, and scalable enterprise applications that support rapid 
+                  feature development and team collaboration.
+                </p>
+              </div>
+              <div>
+                <h5 className="font-semibold text-white mb-2">📦 Reusable Package Ecosystems</h5>
+                <p className="text-gray-300 text-sm">
+                  Created comprehensive package libraries for both frontend and backend components, 
+                  enabling code reuse across enterprise applications, reducing development time, 
+                  and ensuring consistency in UI/UX and business logic.
+                </p>
+              </div>
+              <div>
+                <h5 className="font-semibold text-white mb-2">🔧 Complex Problem Solving</h5>
+                <p className="text-gray-300 text-sm">
+                  Specialized in debugging and optimizing complex enterprise systems, identifying 
+                  performance bottlenecks, refactoring legacy code, and implementing solutions 
+                  that improve system reliability and developer productivity.
+                </p>
+              </div>
+            </div>
+          </div>
+
           {/* University & Educational Technology Expertise */}
           <div className="bg-gradient-to-r from-slate-700 to-slate-600 p-6 rounded-xl border border-slate-500 mb-8">
             <h4 className="text-xl font-bold mb-4 text-primary-300">University & Educational Technology Expertise</h4>
@@ -108,10 +147,10 @@ export const TeamSection: React.FC = () => {
           <h3 className="text-2xl font-bold mb-8 text-white">Core Technical Expertise</h3>
           <div className="flex flex-wrap justify-center gap-3">
             {[
-              '.NET & C#', 'React & Angular', 'TypeScript', 'Microservices Architecture', 
-              'LTI Integrations', 'OAuth & Security', 'PostgreSQL & SQL Server',
+              '.NET & C#', 'React & Angular', 'TypeScript', 'Monorepo Architecture',
+              'Microservices', 'LTI Integrations', 'OAuth & Security', 'PostgreSQL & SQL Server',
               'Docker & Kubernetes', 'Azure & AWS', 'Canvas & Blackboard',
-              'Student Information Systems', 'Academic Workflows', 'API Design'
+              'Student Information Systems', 'Package Libraries', 'API Design'
             ].map((skill) => (
               <span key={skill} className="px-4 py-2 bg-primary-600 text-white rounded-full text-sm">
                 {skill}
