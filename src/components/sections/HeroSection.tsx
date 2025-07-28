@@ -15,7 +15,7 @@ export const HeroSection: React.FC = () => {
           Technology Solutions & Consulting
         </h2>
         <p className="text-xl md:text-2xl mb-8 text-gray-400 max-w-4xl mx-auto">
-          Delivering modern web solutions with exceptional speed and quality
+          Delivering modern web development with thoughtful engineering
         </p>
         <div className="flex flex-wrap justify-center gap-4 mb-12 text-sm md:text-base">
           <span className="px-4 py-2 bg-primary-600/20 text-primary-300 rounded-full border border-primary-600/30">
