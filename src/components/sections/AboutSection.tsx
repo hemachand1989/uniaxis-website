@@ -11,17 +11,19 @@ export const AboutSection: React.FC = () => {
       <div className="max-w-4xl mx-auto">
         <div className="text-lg text-gray-300 mb-12 leading-relaxed">
           <p className="mb-6">
-            As an independent contractor and principal full stack engineer, I bring over 15 years of deep technical expertise 
-            to complex software challenges. My journey spans enterprise-level applications, educational technology, and 
-            cutting-edge cloud solutions.
+            UniAxis is a technology consulting company specializing in complex software solutions for enterprise 
+            and educational organizations. We bring deep technical expertise to challenging projects that require 
+            robust, scalable systems and innovative problem-solving approaches.
           </p>
           <p className="mb-6">
-            I specialize in creating robust, scalable systems using modern technologies like .NET, React, and TypeScript, 
-            with particular expertise in OAuth implementations, microservices architecture, and containerization with Kubernetes.
+            We focus on creating modern solutions using cutting-edge technologies like .NET, React, Angular, and TypeScript, 
+            with specialized expertise in OAuth implementations, microservices architecture, and containerization with Kubernetes. 
+            Our approach emphasizes thoughtful engineering that delivers reliable, maintainable systems.
           </p>
           <p>
-            My passion for educational technology has led me to become an expert in LTI (Learning Tools Interoperability) 
-            solutions, seamlessly integrating custom applications with platforms like Canvas and Blackboard.
+            Our particular strength lies in educational technology, where we've developed comprehensive LTI (Learning Tools 
+            Interoperability) solutions that seamlessly integrate with platforms like Canvas and Blackboard. We understand 
+            the unique challenges of university systems and academic workflows.
           </p>
         </div>
 
