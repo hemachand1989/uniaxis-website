@@ -7,9 +7,9 @@ export const Footer: React.FC = () => {
         <div className="text-2xl font-bold mb-4 gradient-text">
           UniAxis
         </div>
-        <p className="text-gray-400 mb-4">Principal Full Stack Engineer • 15+ Years Experience</p>
+        <p className="text-gray-400 mb-4">Delivering modern web solutions with exceptional speed and quality</p>
         <p className="text-gray-500 text-sm">
-          © 2025 UniAxis. Building the future, one solution at a time.
+          Copyright © 2025 UniAxis (ABN 48 678 809 697, ACN 678 809 697)
         </p>
       </div>
     </footer>
