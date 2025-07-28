@@ -108,7 +108,7 @@ export const TeamSection: React.FC = () => {
           <h3 className="text-2xl font-bold mb-8 text-white">Core Technical Expertise</h3>
           <div className="flex flex-wrap justify-center gap-3">
             {[
-              '.NET & C#', 'React & TypeScript', 'Microservices Architecture', 
+              '.NET & C#', 'React & Angular', 'TypeScript', 'Microservices Architecture', 
               'LTI Integrations', 'OAuth & Security', 'PostgreSQL & SQL Server',
               'Docker & Kubernetes', 'Azure & AWS', 'Canvas & Blackboard',
               'Student Information Systems', 'Academic Workflows', 'API Design'
