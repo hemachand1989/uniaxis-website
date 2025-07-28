@@ -11,9 +11,12 @@ export const HeroSection: React.FC = () => {
         <h1 className="text-5xl md:text-7xl font-bold mb-6 gradient-text animate-fade-in">
           UniAxis
         </h1>
-        <h2 className="text-2xl md:text-3xl mb-8 text-gray-300">
-          Principal Full Stack Engineer
+        <h2 className="text-2xl md:text-3xl mb-4 text-gray-300">
+          Independent Technology Consulting
         </h2>
+        <p className="text-lg md:text-xl mb-8 text-gray-400">
+          Led by <span className="text-primary-400 font-semibold">Hem Paruchuri</span> • Principal Full Stack Engineer
+        </p>
         <p className="text-xl md:text-2xl mb-12 text-gray-400 max-w-3xl mx-auto">
           15+ years of expertise in modern web development, microservices architecture, and LTI integrations
         </p>
@@ -26,11 +29,11 @@ export const HeroSection: React.FC = () => {
             View Services
           </Button>
           <Button
-            onClick={() => scrollToSection('portfolio')}
+            onClick={() => scrollToSection('team')}
             variant="secondary"
             size="lg"
           >
-            See Portfolio
+            Meet the Team
           </Button>
         </div>
       </div>
