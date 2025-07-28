@@ -22,13 +22,13 @@ export const HeroSection: React.FC = () => {
             • Full Stack Development
           </span>
           <span className="px-4 py-2 bg-primary-600/20 text-primary-300 rounded-full border border-primary-600/30">
+            • React / Angular
+          </span>
+          <span className="px-4 py-2 bg-primary-600/20 text-primary-300 rounded-full border border-primary-600/30">
             • Microservices Architecture
           </span>
           <span className="px-4 py-2 bg-primary-600/20 text-primary-300 rounded-full border border-primary-600/30">
             • LTI Integrations
-          </span>
-          <span className="px-4 py-2 bg-primary-600/20 text-primary-300 rounded-full border border-primary-600/30">
-            • Cloud Solutions
           </span>
           <span className="px-4 py-2 bg-primary-600/20 text-primary-300 rounded-full border border-primary-600/30">
             • University Systems
