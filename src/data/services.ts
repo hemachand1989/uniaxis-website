@@ -5,7 +5,7 @@ export const services: Service[] = [
     title: "Full Stack Development",
     description: "End-to-end application development using modern technologies and best practices.",
     features: [
-      "React/TypeScript frontends",
+      "React/Angular frontends",
       ".NET Core backends",
       "Database design & optimization",
       "API development & integration"
