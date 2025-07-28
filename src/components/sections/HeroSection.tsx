@@ -12,7 +12,7 @@ export const HeroSection: React.FC = () => {
           UniAxis
         </h1>
         <h2 className="text-2xl md:text-3xl mb-8 text-gray-300">
-          Independent Technology Consulting
+          Software Engineering Consulting
         </h2>
         <p className="text-xl md:text-2xl mb-8 text-gray-400 max-w-4xl mx-auto">
           Delivering modern web solutions with exceptional speed and quality
