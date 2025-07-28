@@ -12,7 +12,7 @@ export const HeroSection: React.FC = () => {
           UniAxis
         </h1>
         <h2 className="text-2xl md:text-3xl mb-8 text-gray-300">
-          Software Engineering Consulting
+          Technology Solutions & Consulting
         </h2>
         <p className="text-xl md:text-2xl mb-8 text-gray-400 max-w-4xl mx-auto">
           Delivering modern web solutions with exceptional speed and quality
@@ -22,13 +22,13 @@ export const HeroSection: React.FC = () => {
             • Full Stack Development
           </span>
           <span className="px-4 py-2 bg-primary-600/20 text-primary-300 rounded-full border border-primary-600/30">
-            • React / Angular
-          </span>
-          <span className="px-4 py-2 bg-primary-600/20 text-primary-300 rounded-full border border-primary-600/30">
             • Microservices Architecture
           </span>
           <span className="px-4 py-2 bg-primary-600/20 text-primary-300 rounded-full border border-primary-600/30">
             • LTI Integrations
+          </span>
+          <span className="px-4 py-2 bg-primary-600/20 text-primary-300 rounded-full border border-primary-600/30">
+            • Enterprise Software
           </span>
           <span className="px-4 py-2 bg-primary-600/20 text-primary-300 rounded-full border border-primary-600/30">
             • University Systems
