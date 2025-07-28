@@ -2,6 +2,7 @@ import { Navigation, Footer } from '@/components/layout';
 import {
   HeroSection,
   AboutSection,
+  TeamSection,
   ServicesSection,
   PortfolioSection,
   ContactSection,
@@ -14,6 +15,7 @@ function App() {
       <main>
         <HeroSection />
         <AboutSection />
+        <TeamSection />
         <ServicesSection />
         <PortfolioSection />
         <ContactSection />
