@@ -53,11 +53,11 @@ export const HeroSection: React.FC = () => {
           </Button>
         </div>
       </div>
-      {/* Fixed chevron centering */}
-      <div className="absolute bottom-6 sm:bottom-8 left-0 right-0 flex justify-center z-20">
+      {/* Improved chevron centering with perfect alignment */}
+      <div className="absolute bottom-6 sm:bottom-8 left-1/2 transform -translate-x-1/2 z-20">
         <button
           onClick={() => scrollToSection('about')}
-          className="animate-bounce cursor-pointer hover:scale-110 transition-all duration-300 p-2 rounded-full hover:bg-primary-400/20"
+          className="animate-bounce cursor-pointer hover:scale-110 transition-all duration-300 p-2 rounded-full hover:bg-primary-400/20 flex items-center justify-center"
           aria-label="Scroll to About section"
         >
           <ChevronDown className="w-6 h-6 sm:w-8 sm:h-8 text-primary-400 hover:text-primary-300" />
