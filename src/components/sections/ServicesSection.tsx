@@ -10,9 +10,9 @@ export const ServicesSection: React.FC = () => {
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 max-w-6xl mx-auto">
         {services.map((service, index) => (
-          <Card key={index} className="p-6 sm:p-8">
+          <Card key={index} className="p-6 sm:p-8 h-full">
             <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-primary-400">{service.title}</h3>
-            <p className="text-sm sm:text-base text-gray-300 mb-4 sm:mb-6">{service.description}</p>
+            <p className="text-sm sm:text-base text-gray-300 mb-4 sm:mb-6 leading-relaxed">{service.description}</p>
             <ul className="space-y-2">
               {service.features.map((feature, idx) => (
                 <li key={idx} className="flex items-center text-sm sm:text-base text-gray-400">
