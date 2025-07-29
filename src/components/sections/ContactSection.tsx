@@ -65,29 +65,13 @@ Thank you!`;
         event: 'calendly_meeting_clicked',
         meeting_type: 'consultation',
         project_type: selectedProjectType || 'not_specified',
-        timeline: selectedTimeline || 'not_specified'
+        timeline: selectedTimeline || 'not_specified',
+        source: 'contact_modal'
       });
     }
     
+    // Open your Calendly link
     window.open('https://calendly.com/hello-uniaxis/30min', '_blank');
-    onClose();
-  };
-
-  const handleWhatsApp = () => {
-    const message = `Hi! I'm interested in discussing a ${selectedProjectType || 'project'} with UniAxis. ${selectedTimeline ? `Timeline: ${selectedTimeline}. ` : ''}When would be a good time to connect?`;
-    
-    // GTM tracking
-    if (typeof window !== 'undefined' && (window as any).dataLayer) {
-      (window as any).dataLayer.push({
-        event: 'contact_method_selected',
-        contact_method: 'whatsapp',
-        project_type: selectedProjectType || 'not_specified'
-      });
-    }
-    
-    // Replace with your actual WhatsApp Business number when you have one
-    const whatsappLink = `https://wa.me/61XXXXXXXXX?text=${encodeURIComponent(message)}`;
-    window.open(whatsappLink, '_blank');
     onClose();
   };
 
@@ -166,8 +150,8 @@ Thank you!`;
               <div className="flex items-center">
                 <Calendar className="w-5 h-5 mr-3" />
                 <div className="text-left">
-                  <div className="font-semibold">Schedule a Call</div>
-                  <div className="text-sm text-primary-100">Pick a time that works for you</div>
+                  <div className="font-semibold">Schedule a Meeting</div>
+                  <div className="text-sm text-primary-100">Free 30min consultation • Pick your time</div>
                 </div>
               </div>
               <ArrowRight className="w-5 h-5" />
@@ -181,37 +165,42 @@ Thank you!`;
               <div className="flex items-center">
                 <Mail className="w-5 h-5 mr-3 text-blue-400" />
                 <div className="text-left">
-                  <div className="font-semibold text-white">Send Email</div>
+                  <div className="font-semibold text-white">Send Email Instead</div>
                   <div className="text-sm text-gray-400">hello@uniaxis.com.au</div>
                 </div>
               </div>
               <ArrowRight className="w-5 h-5 text-gray-400" />
             </button>
-
-            {/* WhatsApp Option - Commented out until you add WhatsApp Business */}
-            {/*
-            <button
-              onClick={handleWhatsApp}
-              className="w-full flex items-center justify-between p-4 bg-slate-700 hover:bg-slate-600 border border-slate-600 hover:border-green-500 rounded-lg transition-all"
-            >
-              <div className="flex items-center">
-                <MessageCircle className="w-5 h-5 mr-3 text-green-400" />
-                <div className="text-left">
-                  <div className="font-semibold text-white">WhatsApp</div>
-                  <div className="text-sm text-gray-400">Quick message</div>
-                </div>
-              </div>
-              <ArrowRight className="w-5 h-5 text-gray-400" />
-            </button>
-            */}
           </div>
 
-          {/* Footer Note */}
+          {/* Benefits Section */}
           <div className="mt-6 p-4 bg-primary-600/10 border border-primary-600/20 rounded-lg">
-            <div className="flex items-center text-sm text-primary-300">
-              <Clock className="w-4 h-4 mr-2" />
-              <span><strong>Quick Response:</strong> We typically respond within 4 hours during business hours</span>
-            </div>
+            <h4 className="text-sm font-semibold text-white mb-3 flex items-center">
+              <CheckCircle className="w-4 h-4 mr-2 text-green-400" />
+              Why schedule a meeting?
+            </h4>
+            <ul className="space-y-2 text-sm text-gray-300">
+              <li className="flex items-start">
+                <div className="w-1 h-1 bg-primary-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                Better understanding of your specific requirements
+              </li>
+              <li className="flex items-start">
+                <div className="w-1 h-1 bg-primary-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                Immediate answers to your technical questions
+              </li>
+              <li className="flex items-start">
+                <div className="w-1 h-1 bg-primary-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                Faster project kickoff and clearer timeline
+              </li>
+            </ul>
+          </div>
+
+          {/* Response Time */}
+          <div className="mt-4 text-center">
+            <p className="text-xs text-gray-400">
+              <Clock className="w-3 h-3 inline mr-1" />
+              <strong className="text-white">Quick Response:</strong> We typically respond within 4 hours during business hours
+            </p>
           </div>
         </div>
       </div>
@@ -239,7 +228,8 @@ export const ContactSection: React.FC = () => {
     if (typeof window !== 'undefined' && (window as any).dataLayer) {
       (window as any).dataLayer.push({
         event: 'calendly_direct_click',
-        location: 'contact_section'
+        location: 'contact_section',
+        meeting_type: 'consultation'
       });
     }
     
@@ -307,20 +297,28 @@ export const ContactSection: React.FC = () => {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
             <div className="text-center">
               <Video className="w-8 h-8 text-primary-400 mx-auto mb-2" />
-              <div className="text-sm text-gray-300">Face-to-face discussion for better understanding</div>
+              <div className="text-sm text-gray-300">
+                <strong className="text-white">Face-to-Face</strong><br/>
+                Better understanding through direct conversation
+              </div>
             </div>
             <div className="text-center">
               <CheckCircle className="w-8 h-8 text-green-400 mx-auto mb-2" />
-              <div className="text-sm text-gray-300">Tailored solutions based on your specific needs</div>
+              <div className="text-sm text-gray-300">
+                <strong className="text-white">Tailored Solutions</strong><br/>
+                Custom recommendations for your specific needs
+              </div>
             </div>
             <div className="text-center">
               <Clock className="w-8 h-8 text-blue-400 mx-auto mb-2" />
-              <div className="text-sm text-gray-300">Clear next steps and timeline established</div>
+              <div className="text-sm text-gray-300">
+                <strong className="text-white">Efficient Process</strong><br/>
+                Clear next steps and timeline established
+              </div>
             </div>
           </div>
           <p className="text-sm sm:text-base text-gray-400">
-            Whether you need a complete application, LTI integration, or technical consulting, 
-            we're here to help turn your vision into reality.
+            <strong className="text-white">Free 30-minute consultation</strong> • No commitment required • Quick response guaranteed
           </p>
         </Card>
       </div>
