@@ -9,7 +9,7 @@ export const PortfolioSection: React.FC = () => {
       <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12 sm:mb-16 gradient-text">
         Featured Work
       </h2>
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-4xl mx-auto space-y-6 sm:space-y-8">
         {projects.map((project, index) => (
           <Card key={index} className="p-6 sm:p-8">
             <div className="mb-4 sm:mb-6">
