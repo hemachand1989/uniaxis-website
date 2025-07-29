@@ -1,9 +1,21 @@
 import React from 'react';
-import { ChevronDown } from 'lucide-react';
+import { ChevronDown, Calendar } from 'lucide-react';
 import { Button } from '@/components/ui';
 import { scrollToSection } from '@/utils/navigation';
 
 export const HeroSection: React.FC = () => {
+  const handleScheduleCall = () => {
+    // GTM tracking
+    if (typeof window !== 'undefined' && (window as any).dataLayer) {
+      (window as any).dataLayer.push({
+        event: 'calendly_hero_click',
+        location: 'hero_section'
+      });
+    }
+    
+    window.open('https://calendly.com/hello-uniaxis/30min', '_blank');
+  };
+
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* SEO-friendly structured content */}
@@ -40,20 +52,21 @@ export const HeroSection: React.FC = () => {
         
         <nav className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-12 sm:mb-16" aria-label="Main navigation">
           <Button
-            onClick={() => scrollToSection('services')}
+            onClick={handleScheduleCall}
             variant="primary"
             size="lg"
-            className="w-full sm:w-auto"
+            className="w-full sm:w-auto flex items-center justify-center"
           >
-            View Services
+            <Calendar className="w-4 h-4 mr-2" />
+            Schedule Free Call
           </Button>
           <Button
-            onClick={() => scrollToSection('team')}
+            onClick={() => scrollToSection('services')}
             variant="secondary"
             size="lg"
             className="w-full sm:w-auto"
           >
-            Meet the Team
+            View Services
           </Button>
         </nav>
       </div>
