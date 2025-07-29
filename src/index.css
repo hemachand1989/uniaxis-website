@@ -14,11 +14,11 @@
 
 @layer components {
   .btn-primary {
-    @apply px-8 py-4 bg-gradient-to-r from-primary-600 to-secondary-500 rounded-lg font-semibold hover:from-primary-700 hover:to-secondary-600 transform hover:scale-105 transition-all duration-300 shadow-lg;
+    @apply px-6 py-3 sm:px-8 sm:py-4 bg-gradient-to-r from-primary-600 to-secondary-500 rounded-lg font-semibold hover:from-primary-700 hover:to-secondary-600 transform hover:scale-105 transition-all duration-300 shadow-lg text-sm sm:text-base;
   }
   
   .btn-secondary {
-    @apply px-8 py-4 border-2 border-primary-400 rounded-lg font-semibold hover:bg-primary-400 hover:text-slate-900 transition-all duration-300;
+    @apply px-6 py-3 sm:px-8 sm:py-4 border-2 border-primary-400 rounded-lg font-semibold hover:bg-primary-400 hover:text-slate-900 transition-all duration-300 text-sm sm:text-base;
   }
   
   .gradient-text {
@@ -26,14 +26,29 @@
   }
   
   .card {
-    @apply bg-gradient-to-br from-slate-800 to-slate-700 p-6 rounded-xl border border-slate-600 hover:border-primary-400 transition-all duration-300 transform hover:scale-105;
+    @apply bg-gradient-to-br from-slate-800 to-slate-700 p-4 sm:p-6 rounded-xl border border-slate-600 hover:border-primary-400 transition-all duration-300 transform hover:scale-105;
   }
   
   .section-padding {
-    @apply py-20;
+    @apply py-12 sm:py-16 md:py-20;
   }
   
   .container-custom {
-    @apply container mx-auto px-6;
+    @apply container mx-auto px-4 sm:px-6;
+  }
+
+  /* Mobile-specific improvements */
+  @media (max-width: 640px) {
+    .btn-primary, .btn-secondary {
+      @apply text-center;
+    }
+    
+    h1, h2, h3 {
+      @apply leading-tight;
+    }
+    
+    .card {
+      @apply p-4;
+    }
   }
 }
