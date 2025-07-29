@@ -6,7 +6,8 @@ import { scrollToSection } from '@/utils/navigation';
 export const HeroSection: React.FC = () => {
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-primary-600/20 to-secondary-400/20 animate-pulse"></div>
+      {/* SEO-friendly structured content */}
+      <header className="absolute inset-0 bg-gradient-to-r from-primary-600/20 to-secondary-400/20 animate-pulse"></header>
       <div className="container-custom text-center relative z-10 py-20 sm:py-0">
         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 sm:mb-6 gradient-text animate-fade-in leading-tight">
           UniAxis
@@ -17,24 +18,27 @@ export const HeroSection: React.FC = () => {
         <p className="text-base sm:text-lg md:text-xl lg:text-2xl mb-6 sm:mb-8 text-gray-400 max-w-4xl mx-auto">
           Delivering modern web development with thoughtful engineering
         </p>
-        <div className="flex flex-wrap justify-center gap-2 sm:gap-3 md:gap-4 mb-8 sm:mb-12 text-xs sm:text-sm md:text-base">
-          <span className="px-2 sm:px-3 md:px-4 py-1 sm:py-2 bg-primary-600/20 text-primary-300 rounded-full border border-primary-600/30 text-center">
+        
+        {/* Service highlights with structured data */}
+        <div className="flex flex-wrap justify-center gap-2 sm:gap-3 md:gap-4 mb-8 sm:mb-12 text-xs sm:text-sm md:text-base" role="list" aria-label="Our core services">
+          <span className="px-2 sm:px-3 md:px-4 py-1 sm:py-2 bg-primary-600/20 text-primary-300 rounded-full border border-primary-600/30 text-center" role="listitem">
             • Full Stack Development
           </span>
-          <span className="px-2 sm:px-3 md:px-4 py-1 sm:py-2 bg-primary-600/20 text-primary-300 rounded-full border border-primary-600/30 text-center">
+          <span className="px-2 sm:px-3 md:px-4 py-1 sm:py-2 bg-primary-600/20 text-primary-300 rounded-full border border-primary-600/30 text-center" role="listitem">
             • Microservices Architecture
           </span>
-          <span className="px-2 sm:px-3 md:px-4 py-1 sm:py-2 bg-primary-600/20 text-primary-300 rounded-full border border-primary-600/30 text-center">
+          <span className="px-2 sm:px-3 md:px-4 py-1 sm:py-2 bg-primary-600/20 text-primary-300 rounded-full border border-primary-600/30 text-center" role="listitem">
             • LTI Integrations
           </span>
-          <span className="px-2 sm:px-3 md:px-4 py-1 sm:py-2 bg-primary-600/20 text-primary-300 rounded-full border border-primary-600/30 text-center">
+          <span className="px-2 sm:px-3 md:px-4 py-1 sm:py-2 bg-primary-600/20 text-primary-300 rounded-full border border-primary-600/30 text-center" role="listitem">
             • Enterprise Software
           </span>
-          <span className="px-2 sm:px-3 md:px-4 py-1 sm:py-2 bg-primary-600/20 text-primary-300 rounded-full border border-primary-600/30 text-center">
+          <span className="px-2 sm:px-3 md:px-4 py-1 sm:py-2 bg-primary-600/20 text-primary-300 rounded-full border border-primary-600/30 text-center" role="listitem">
             • University Systems
           </span>
         </div>
-        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-12 sm:mb-16">
+        
+        <nav className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-12 sm:mb-16" aria-label="Main navigation">
           <Button
             onClick={() => scrollToSection('services')}
             variant="primary"
@@ -51,9 +55,10 @@ export const HeroSection: React.FC = () => {
           >
             Meet the Team
           </Button>
-        </div>
+        </nav>
       </div>
-      {/* Improved chevron centering with perfect alignment */}
+      
+      {/* Perfectly centered scroll indicator */}
       <div className="absolute bottom-6 sm:bottom-8 left-1/2 transform -translate-x-1/2 z-20">
         <button
           onClick={() => scrollToSection('about')}
