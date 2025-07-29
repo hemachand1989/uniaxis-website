@@ -59,6 +59,22 @@ Thank you!`;
   };
 
   const handleScheduleCall = () => {
+    // Build Calendly URL with pre-filled information
+    let calendlyUrl = 'https://calendly.com/hello-uniaxis/30min';
+    
+    // Add project context as URL parameters that Calendly can capture
+    const params = new URLSearchParams();
+    if (selectedProjectType) {
+      params.append('project_type', selectedProjectType);
+    }
+    if (selectedTimeline) {
+      params.append('timeline', selectedTimeline);
+    }
+    
+    if (params.toString()) {
+      calendlyUrl += `?${params.toString()}`;
+    }
+    
     // GTM tracking
     if (typeof window !== 'undefined' && (window as any).dataLayer) {
       (window as any).dataLayer.push({
@@ -70,8 +86,7 @@ Thank you!`;
       });
     }
     
-    // Open your Calendly link
-    window.open('https://calendly.com/hello-uniaxis/30min', '_blank');
+    window.open(calendlyUrl, '_blank');
     onClose();
   };
 
@@ -291,28 +306,28 @@ export const ContactSection: React.FC = () => {
           </div>
         </div>
 
-        {/* Benefits Card */}
+        {/* Benefits Card - Fixed for Desktop */}
         <Card className="p-6 sm:p-8 text-center">
-          <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">Why Schedule a Call?</h3>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
+          <h3 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6">Why Schedule a Call?</h3>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8 mb-6">
             <div className="text-center">
-              <Video className="w-8 h-8 text-primary-400 mx-auto mb-2" />
-              <div className="text-sm text-gray-300">
-                <strong className="text-white">Face-to-Face</strong><br/>
+              <Video className="w-12 h-12 sm:w-16 sm:h-16 text-primary-400 mx-auto mb-3 sm:mb-4" />
+              <div className="text-sm sm:text-base text-gray-300">
+                <strong className="text-white text-base sm:text-lg block mb-1 sm:mb-2">Face-to-Face</strong>
                 Better understanding through direct conversation
               </div>
             </div>
             <div className="text-center">
-              <CheckCircle className="w-8 h-8 text-green-400 mx-auto mb-2" />
-              <div className="text-sm text-gray-300">
-                <strong className="text-white">Tailored Solutions</strong><br/>
+              <CheckCircle className="w-12 h-12 sm:w-16 sm:h-16 text-green-400 mx-auto mb-3 sm:mb-4" />
+              <div className="text-sm sm:text-base text-gray-300">
+                <strong className="text-white text-base sm:text-lg block mb-1 sm:mb-2">Tailored Solutions</strong>
                 Custom recommendations for your specific needs
               </div>
             </div>
             <div className="text-center">
-              <Clock className="w-8 h-8 text-blue-400 mx-auto mb-2" />
-              <div className="text-sm text-gray-300">
-                <strong className="text-white">Efficient Process</strong><br/>
+              <Clock className="w-12 h-12 sm:w-16 sm:h-16 text-blue-400 mx-auto mb-3 sm:mb-4" />
+              <div className="text-sm sm:text-base text-gray-300">
+                <strong className="text-white text-base sm:text-lg block mb-1 sm:mb-2">Efficient Process</strong>
                 Clear next steps and timeline established
               </div>
             </div>
