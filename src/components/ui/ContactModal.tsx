@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Calendar, Clock, Video, X, ArrowRight, CheckCircle, Mail, MessageCircle } from 'lucide-react';
+import { Calendar, X, ArrowRight, CheckCircle, Mail } from 'lucide-react';
 
 interface ContactModalProps {
   isOpen: boolean;
