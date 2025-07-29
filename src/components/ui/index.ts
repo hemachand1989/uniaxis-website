@@ -1,3 +1,4 @@
 export { Button } from './Button';
-export { Section } from './Section';
 export { Card } from './Card';
+export { Section } from './Section';
+export { ContactModal } from './ContactModal';
