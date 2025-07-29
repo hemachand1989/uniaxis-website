@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Calendar } from 'lucide-react';
 import { navigationItems } from '@/data/navigation';
 import { scrollToSection, getActiveSection } from '@/utils/navigation';
 
@@ -23,11 +23,25 @@ export const Navigation: React.FC = () => {
     setIsMenuOpen(false);
   };
 
+  const handleScheduleCall = () => {
+    // GTM tracking
+    if (typeof window !== 'undefined' && (window as any).dataLayer) {
+      (window as any).dataLayer.push({
+        event: 'calendly_nav_click',
+        location: 'navigation',
+        meeting_type: 'consultation'
+      });
+    }
+    
+    window.open('https://calendly.com/hello-uniaxis/30min', '_blank');
+    setIsMenuOpen(false);
+  };
+
   return (
     <nav className="fixed top-0 w-full bg-slate-900/95 backdrop-blur-sm z-50 border-b border-slate-700">
       <div className="container-custom">
         <div className="flex justify-between items-center py-4">
-          {/* Logo and Brand - Better alignment */}
+          {/* Logo and Brand */}
           <button 
             onClick={() => handleNavClick('home')}
             className="flex items-center space-x-3 hover:opacity-80 transition-opacity"
@@ -43,7 +57,7 @@ export const Navigation: React.FC = () => {
           </button>
           
           {/* Desktop Menu */}
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden md:flex items-center space-x-8">
             {navigationItems.map((item) => (
               <button
                 key={item.id}
@@ -55,6 +69,15 @@ export const Navigation: React.FC = () => {
                 {item.label}
               </button>
             ))}
+            
+            {/* CTA Button */}
+            <button
+              onClick={handleScheduleCall}
+              className="px-4 py-2 bg-gradient-to-r from-primary-600 to-secondary-500 hover:from-primary-700 hover:to-secondary-600 rounded-lg font-semibold transition-all transform hover:scale-105 flex items-center text-sm"
+            >
+              <Calendar className="w-4 h-4 mr-1" />
+              Schedule Call
+            </button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -78,6 +101,15 @@ export const Navigation: React.FC = () => {
                 {item.label}
               </button>
             ))}
+            
+            {/* Mobile CTA */}
+            <button
+              onClick={handleScheduleCall}
+              className="w-full mt-3 px-4 py-2 bg-gradient-to-r from-primary-600 to-secondary-500 hover:from-primary-700 hover:to-secondary-600 rounded-lg font-semibold transition-all flex items-center justify-center text-sm"
+            >
+              <Calendar className="w-4 h-4 mr-2" />
+              Schedule Call
+            </button>
           </div>
         )}
       </div>
